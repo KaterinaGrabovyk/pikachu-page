@@ -1,0 +1,357 @@
+
+:root{
+    --grass-color:linear-gradient(rgb(8, 135, 8),rgb(56, 251, 18));
+    --tree-leaf-color:radial-gradient(rgb(6, 114, 6),rgb(10, 163, 10),rgb(56, 251, 18) );
+    --tree-body-color:linear-gradient(90deg,rgb(108, 50, 19),rgb(152, 72, 29));
+    --pikachu-color: linear-gradient(rgb(242, 218, 2) ,rgb(251, 200, 18));
+}
+body{
+    background:linear-gradient(rgb(108, 178, 227),rgb(196, 236, 229)) ;
+    margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.sun{
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    background: radial-gradient(rgb(242, 218, 2) 20%,rgb(251, 142, 18));
+    border-radius: 50%;
+    top:-120px;
+    right:-120px;
+}
+/*PIKACHU*/
+.pikachu {
+    width: 300px;
+    height: 300px;
+    top:230px;   
+    position: absolute;
+    right: 400px;
+}
+.pikachu *{
+    position: fixed;
+}
+.head {
+    width: 200px;
+    height: 200px;
+    background:linear-gradient(rgb(242, 218, 2) 70% ,rgb(251, 200, 18),rgb(241, 175, 5));
+    border-radius: 50% 50% 40% 40%;
+    margin-top: -50px;
+    margin-left:60px;
+    z-index: 5;
+}
+.ear {
+    width: 50px;
+    height: 200px;
+    background:var(--pikachu-color); 
+    z-index: 4;
+    border-radius: 60% 60% 0% 0%;
+    overflow: hidden;
+}
+.ear_left_inside{
+    width: 50px;
+    height: 200px;
+    top:-40px;
+    left: -40px;
+    transform: rotate(35deg);
+    background:black; 
+}
+.ear_right_inside{
+    width: 50px;
+    height: 200px;
+    top:-20px;
+    left: 48px;
+    transform: rotate(-30deg);
+    background:black; 
+
+}
+.ear.left {
+    margin-top: -150px;
+    margin-left:40px;
+    transform: rotate(-50deg);
+}
+.ear.right {
+    margin-top: -160px;
+    margin-left:220px;
+    transform: rotate(40deg);
+}
+.eye {
+    width:40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    margin-top:60px;
+}
+.eye.left{
+    margin-left:30px
+}
+.eye.right{
+    margin-left:130px;
+}
+.eye_inside{
+    width:20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    margin-top: 2px;
+
+}
+.eye_inside.left{
+    margin-left: 14px;
+    
+}
+.eye_inside.right{
+    margin-left: 6px;
+}
+.nose {
+    width:20px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    margin-top:100px;
+    margin-left: 90px;
+}
+.blush {
+    width:40px;
+    height: 40px;
+    background: red;
+    border-radius: 50%;
+    margin-top: 120px;
+    border: 1px solid   rgb(233, 209, 28);
+}
+.blush.left{
+margin-left: 10px;
+}
+.blush.right{
+    margin-left: 150px;
+}
+.mouth{
+    width: 50px;
+    height: 50px;
+    border: 2.3px solid #000;
+    border-radius: 190%/190px 150px 0 0;
+    border-color: black transparent transparent transparent;
+    margin-top:90px ;
+}
+.mouth.left{
+   margin-left: 56px;
+   transform: rotate(170deg);
+}
+.mouth.right{
+    margin-left: 93px;
+    transform: rotate(-170deg);
+}
+.body {
+    width: 220px;
+    height: 280px;
+    background:var(--pikachu-color);
+    border-radius: 50% 50% 40% 40%;
+    margin-top:80px;
+    margin-left:50px;
+    z-index: 4;
+}
+.hand {
+    width: 60px;
+    height: 120px;
+    background:linear-gradient(rgb(242, 190, 2),rgb(241, 166, 5)); 
+    border-radius: 40% 40% 60% 60%;
+}
+.hand.left{
+    margin-top: 90px;
+    margin-left: 40px;
+    transform-origin: left top ;
+    transform: rotate(100deg);
+    animation: wave 3s linear infinite;
+}
+
+@keyframes wave{
+    10%{
+        transform: rotate(120deg);
+    }
+    20%{
+        transform: rotate(100deg);
+        
+    }
+    30%{
+        transform: rotate(120deg);
+    }
+    40%{
+        transform: rotate(100deg);
+    }
+    50%{
+        transform: rotate(120deg);
+    }
+    60%{
+        transform: rotate(100deg);
+    }
+    }
+
+.hand.right{
+    margin-top: 90px;
+    margin-left: 140px;
+}
+.back{
+    z-index: 3;
+}
+.leg {
+    width: 50px;
+    height: 120px;
+    background:linear-gradient(rgb(241, 166, 5),rgb(242, 190, 2)); 
+    margin-top: 290px;
+    border-radius: 60% 60% 40% 40%;
+}
+.leg.left{
+transform: rotate(-130deg);
+margin-left: 90px;
+}
+.leg.right{
+margin-left: 180px;
+transform: rotate(130deg);
+}
+.tail_0{
+    width: 170px;
+    height: 70px;
+    background:linear-gradient(30deg,rgb(242, 190, 2) 70%,white ); 
+    margin-left: 319px;
+    margin-top: 100px;
+    border-radius: 10% 10% 20% 20%;
+    transform: rotate(-7deg);
+}
+.tail_1 {
+   width: 30px;
+    height: 110px;
+    background:rgb(242, 190, 2); 
+    margin-left: 309px;
+    margin-top: 110px;
+    border-radius: 10% 10% 10% 20%;
+transform: rotate(-7deg);
+}
+.tail_2 {
+    width: 30px;
+    height: 60px;
+    background:rgb(242, 190, 2);
+    margin-left: 300px;
+    margin-top: 190px;
+    border-radius: 10% 10% 10% 20%;
+    transform: rotate(80deg);
+}
+.tail_3 {
+    width: 30px;
+    height: 80px;
+    background:linear-gradient(rgb(242, 190, 2) 50%,rgb(125, 56, 0)); 
+    margin-left: 265px;
+    margin-top: 210px;
+    border-radius: 40% 0% 10% 10%;
+    transform: rotate(-8deg);
+}
+.tail_4 {
+    width: 20px;
+    height: 140px;
+    background:linear-gradient(rgb(125, 56, 0),rgb(196, 90, 4)); 
+    transform: rotate(85deg);
+    margin-left: 220px;
+    margin-top: 220px;
+    border-radius: 50% 10% 40% 40%;
+}
+.tail{
+    animation: Tailmove 5s linear infinite;
+    transform-origin: margin-left margin-top;
+}
+/*PIKACHU*/
+.grass{
+    width: 100%;
+    height: 200px;
+    background:var(--grass-color);
+    position: fixed;
+   z-index: 1;
+   bottom: -30px;
+}
+.hill{
+    height: 300px;
+    width: 700px;
+    position: fixed;
+    left:-50px;
+    background:var(--grass-color);
+    border-radius: 90% 90% 0% 0%;
+     margin-top: 420px;
+     z-index: 1;
+}
+/*TREE*/
+.tree_body *{
+    position: fixed;
+}
+.tree_smallleaf {
+    width: 120px;
+    height: 120px;
+    background: var(--tree-leaf-color);
+    border-radius: 50%;
+    left:130px;
+    top:130px;
+}
+.tree_aveleaf {
+    width: 170px;
+    height: 170px;
+    background: var(--tree-leaf-color);
+    border-radius: 50%;
+    left:280px;
+    top:90px;
+    z-index: 3;
+
+}
+.tree_bigleaf {
+    width: 230px;
+    height: 230px;
+    background: var(--tree-leaf-color);
+    border-radius: 50%;
+    left:160px;
+    top:30px;
+}
+.tree_avebranch {
+    width: 20px;
+    height: 100px;
+    left:320px;
+    top:240px;
+    transform: rotate(30deg);
+    border-radius:0% 0% 50% 50% ;
+    background: var(--tree-body-color);
+}
+.tree_smallbranch {
+    width: 20px;
+    height: 100px;
+    left:220px;
+    transform: rotate(-34deg);
+    z-index: -1;
+    top:210px;
+    background: var(--tree-body-color);
+}
+.tree_trunk{
+    width: 70px;
+    height: 300px;
+background: var(--tree-body-color);
+left:250px;
+top:160px;
+z-index: -1;
+}
+
+@keyframes Tailmove{
+10%{
+    transform: rotate(-7deg) ;
+}
+20%{
+    transform: rotate(-5deg) ;
+}
+30%{
+    transform: rotate(-8deg) ;
+}
+40%{
+    transform: rotate(-5deg) ;
+}
+50%{
+    transform: rotate(-9deg) ;
+}
+60%{
+    transform: rotate(-5deg) ;
+}
+}
